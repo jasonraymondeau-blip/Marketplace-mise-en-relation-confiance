@@ -1,0 +1,22 @@
+{
+  "name": "zafer-motion-design",
+  "version": "1.0.0",
+  "description": "Zafer Launch Motion Design Video — 45s",
+  "scripts": {
+    "start": "npx remotion studio",
+    "build": "npx remotion render src/Root.tsx ZaferLaunch output/zafer-launch-2026.mp4 --codec=h264",
+    "render": "npx remotion render src/Root.tsx ZaferLaunch output/zafer-launch-2026.mp4 --codec=h264",
+    "preview": "npx remotion studio"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
