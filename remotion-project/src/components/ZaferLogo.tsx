@@ -7,14 +7,45 @@ interface ZaferLogoProps {
   size?: number;
   animated?: boolean;
   startFrame?: number;
-  variant?: 'color' | 'white-on-black';
+  variant?: 'color' | 'white-on-dark' | 'icon-only';
+  showText?: boolean;
 }
+
+// Vrai logo Zafer : maison arrondie terracotta avec sourire blanc
+const HouseSmileIcon: React.FC<{ size: number; houseColor: string; smileColor: string }> = ({
+  size,
+  houseColor,
+  smileColor,
+}) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 100 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Forme maison arrondie */}
+    <path
+      d="M50 14 C53 14 82 37 84 40 L84 78 C84 84 79 88 73 88 L27 88 C21 88 16 84 16 78 L16 40 C18 37 47 14 50 14 Z"
+      fill={houseColor}
+    />
+    {/* Sourire intérieur */}
+    <path
+      d="M35 62 Q50 76 65 62"
+      stroke={smileColor}
+      strokeWidth="5.5"
+      strokeLinecap="round"
+      fill="none"
+    />
+  </svg>
+);
 
 export const ZaferLogo: React.FC<ZaferLogoProps> = ({
   size = 100,
   animated = false,
   startFrame = 0,
   variant = 'color',
+  showText = false,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -23,34 +54,31 @@ export const ZaferLogo: React.FC<ZaferLogoProps> = ({
     ? spring({ frame: frame - startFrame, fps, config: SPRING_PRESETS.logo, from: 0, to: 1 })
     : 1;
 
-  if (variant === 'white-on-black') {
+  if (variant === 'white-on-dark') {
     return (
       <div
         style={{
-          width: size,
-          height: size,
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
+          gap: 12,
           transform: `scale(${scale})`,
-          flexShrink: 0,
         }}
       >
-        <svg
-          width={size}
-          height={size}
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M22 28h56l-38 44h38"
-            stroke="#FFFFFF"
-            strokeWidth="7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <HouseSmileIcon size={size} houseColor="#FFFFFF" smileColor="#000000" />
+        {showText && (
+          <span
+            style={{
+              fontSize: size * 0.4,
+              fontWeight: 700,
+              color: '#FFFFFF',
+              fontFamily: "'DM Sans', sans-serif",
+              letterSpacing: 2,
+            }}
+          >
+            Zafer
+          </span>
+        )}
       </div>
     );
   }
@@ -58,33 +86,27 @@ export const ZaferLogo: React.FC<ZaferLogoProps> = ({
   return (
     <div
       style={{
-        width: size,
-        height: size,
-        borderRadius: size * 0.22,
-        backgroundColor: ZAFER_COLORS.primary,
         display: 'flex',
+        flexDirection: showText ? 'row' : 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        gap: showText ? 14 : 12,
         transform: `scale(${scale})`,
-        flexShrink: 0,
-        boxShadow: '0 4px 16px rgba(190,92,60,0.25)',
       }}
     >
-      <svg
-        width={size * 0.6}
-        height={size * 0.6}
-        viewBox="0 0 60 60"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10 14h40l-27 32h27"
-          stroke="#FFFFFF"
-          strokeWidth="5.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <HouseSmileIcon size={size} houseColor={ZAFER_COLORS.primary} smileColor="#FFFFFF" />
+      {showText && (
+        <span
+          style={{
+            fontSize: size * 0.55,
+            fontWeight: 700,
+            color: ZAFER_COLORS.text.primary,
+            fontFamily: "'DM Sans', sans-serif",
+            letterSpacing: 0.5,
+          }}
+        >
+          Zafer
+        </span>
+      )}
     </div>
   );
 };

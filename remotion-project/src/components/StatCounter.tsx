@@ -9,6 +9,7 @@ interface StatCounterProps {
   label: string;
   durationFrames?: number;
   opacity: number;
+  colorScheme?: 'light' | 'dark';
 }
 
 export const StatCounter: React.FC<StatCounterProps> = ({
@@ -18,12 +19,21 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   label,
   durationFrames = 60,
   opacity,
+  colorScheme = 'light',
 }) => {
   const value = useCounterAnimation(startFrame, target, durationFrames);
 
-  const formatted = target >= 1000
-    ? (value >= 1000 ? `${(value / 1000).toFixed(1).replace('.0', '')}k` : String(value))
-    : String(value);
+  const valueColor = colorScheme === 'dark' ? '#FFFFFF' : ZAFER_COLORS.primary;
+  const labelColor = colorScheme === 'dark' ? 'rgba(255,255,255,0.75)' : ZAFER_COLORS.text.tertiary;
+
+  let displayValue: string;
+  if (target >= 1000) {
+    const k = value / 1000;
+    const formatted = k >= 1 ? `${k.toFixed(1).replace('.0', '')}k` : String(value);
+    displayValue = `${formatted}+`;
+  } else {
+    displayValue = `${value}${suffix}`;
+  }
 
   return (
     <div
@@ -40,17 +50,17 @@ export const StatCounter: React.FC<StatCounterProps> = ({
         style={{
           fontSize: 52,
           fontWeight: 700,
-          color: ZAFER_COLORS.primary,
+          color: valueColor,
           fontFamily: TYPOGRAPHY.headingL.family,
           lineHeight: 1,
         }}
       >
-        {target >= 1000 ? `${formatted}+` : `${value}${suffix}`}
+        {displayValue}
       </div>
       <div
         style={{
           fontSize: 13,
-          color: ZAFER_COLORS.text.tertiary,
+          color: labelColor,
           fontFamily: TYPOGRAPHY.bodyM.family,
           textAlign: 'center',
           maxWidth: 160,

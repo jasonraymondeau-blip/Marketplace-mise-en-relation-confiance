@@ -1,5 +1,5 @@
 import React from 'react';
-import { Composition, AbsoluteFill, Sequence, continueRender, delayRender, staticFile } from 'remotion';
+import { Composition, AbsoluteFill, Sequence, continueRender, delayRender, staticFile, registerRoot } from 'remotion';
 import { VIDEO_WIDTH, VIDEO_HEIGHT, VIDEO_FPS, VIDEO_DURATION_FRAMES, SCENES } from './consts';
 import { Scene1Problem } from './scenes/Scene1Problem';
 import { Scene2MoBann } from './scenes/Scene2MoBann';
@@ -79,3 +79,5 @@ export const RemotionRoot: React.FC = () => {
     </>
   );
 };
+
+registerRoot(RemotionRoot);

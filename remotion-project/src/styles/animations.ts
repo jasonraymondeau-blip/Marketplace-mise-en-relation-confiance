@@ -4,6 +4,7 @@ export const SPRING_PRESETS = {
   logo: { mass: 1, damping: 20, stiffness: 80 },
   card: { mass: 1, damping: 24, stiffness: 120 },
   button: { mass: 0.8, damping: 22, stiffness: 100 },
+  bounce: { mass: 0.7, damping: 14, stiffness: 160 },
 };
 
 export function fadeIn(frame: number, startFrame: number, durationFrames = 18): number {
@@ -18,7 +19,7 @@ export function slideUp(frame: number, startFrame: number, distance = 20, durati
   return interpolate(frame, [startFrame, startFrame + durationFrames], [distance, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
-    easing: Easing.out(Easing.ease),
+    easing: Easing.out(Easing.cubic),
   });
 }
 
@@ -33,7 +34,25 @@ export function slideInFrom(
   return interpolate(frame, [startFrame, startFrame + durationFrames], [from, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
+    easing: Easing.out(Easing.cubic),
+  });
+}
+
+// Effet motion blur — valeur blur en pixels (0 = net, 12 = flou entrée)
+export function motionBlur(frame: number, startFrame: number, durationFrames = 12): number {
+  return interpolate(frame, [startFrame, startFrame + durationFrames], [12, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
     easing: Easing.out(Easing.ease),
+  });
+}
+
+// Scale d'entrée (0.85 → 1 style kinetic)
+export function scaleIn(frame: number, startFrame: number, from = 0.85, durationFrames = 20): number {
+  return interpolate(frame, [startFrame, startFrame + durationFrames], [from, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+    easing: Easing.out(Easing.cubic),
   });
 }
 

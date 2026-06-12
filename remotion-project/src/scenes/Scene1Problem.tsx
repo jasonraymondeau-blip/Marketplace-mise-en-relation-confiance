@@ -1,29 +1,34 @@
 import React from 'react';
-import { useCurrentFrame, interpolate, Easing } from 'remotion';
+import { useCurrentFrame } from 'remotion';
 import { ZAFER_COLORS, TYPOGRAPHY } from '../styles/colors';
-import { fadeIn, slideUp, sceneTransitionOut } from '../styles/animations';
+import { fadeIn, slideUp, motionBlur, sceneTransitionOut, scaleIn } from '../styles/animations';
+import { PillBadge } from '../components/PillBadge';
 
 export const Scene1Problem: React.FC = () => {
   const frame = useCurrentFrame();
 
-  const titleOpacity = fadeIn(frame, 6, 18);
-  const titleY = slideUp(frame, 6, 20, 24);
+  // "Vous êtes" style — gros texte en motion blur
+  const h1Opacity = fadeIn(frame, 4, 14);
+  const h1Y = slideUp(frame, 4, 40, 20);
+  const h1Blur = motionBlur(frame, 4, 14);
+  const h1Scale = scaleIn(frame, 4, 0.82, 18);
 
-  const lineWidth = interpolate(frame, [30, 60], [0, 100], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    easing: Easing.out(Easing.ease),
-  });
-  const lineOpacity = fadeIn(frame, 30, 12);
+  // "Mauriciens" mis en avant
+  const h2Opacity = fadeIn(frame, 18, 14);
+  const h2Y = slideUp(frame, 18, 30, 18);
+  const h2Blur = motionBlur(frame, 18, 12);
+  const h2Scale = scaleIn(frame, 18, 0.85, 16);
 
-  const subOpacity = fadeIn(frame, 60, 18);
-  const subY = slideUp(frame, 60, 10, 24);
+  // Pill badge problème
+  const badgeOpacity = fadeIn(frame, 52, 14);
+  const badgeX = slideUp(frame, 52, 0, 18); // slideUp utilisé comme distance X pour pill
 
-  const badgeOpacity = fadeIn(frame, 100, 12);
+  // Sous-texte
+  const subOpacity = fadeIn(frame, 68, 16);
+  const subY = slideUp(frame, 68, 18, 20);
 
   const outOpacity = sceneTransitionOut(frame, 108, 12);
-
-  const containerOpacity = frame < 108 ? 1 : outOpacity;
+  const containerOpacity = frame >= 108 ? outOpacity : 1;
 
   return (
     <div
@@ -35,36 +40,77 @@ export const Scene1Problem: React.FC = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 48,
-        fontFamily: TYPOGRAPHY.headingM.family,
+        padding: '48px 44px',
+        gap: 0,
         opacity: containerOpacity,
-        gap: 20,
+        fontFamily: "'DM Sans', sans-serif",
       }}
     >
+      {/* Gros texte kinetic — ligne 1 */}
       <div
         style={{
-          fontSize: 28,
+          fontSize: 56,
           fontWeight: 700,
           color: ZAFER_COLORS.text.primary,
           textAlign: 'center',
-          opacity: titleOpacity,
-          transform: `translateY(${titleY}px)`,
-          lineHeight: 1.3,
+          opacity: h1Opacity,
+          transform: `translateY(${h1Y}px) scale(${h1Scale})`,
+          filter: `blur(${h1Blur}px)`,
+          lineHeight: 1.1,
+          marginBottom: 6,
         }}
       >
-        Acheter, vendre à Maurice...
+        Vous êtes
       </div>
 
+      {/* Gros texte kinetic — ligne 2 */}
       <div
         style={{
-          height: 2,
-          width: `${lineWidth}%`,
-          backgroundColor: ZAFER_COLORS.border.light,
-          opacity: lineOpacity,
-          borderRadius: 2,
+          fontSize: 56,
+          fontWeight: 700,
+          color: ZAFER_COLORS.primary,
+          textAlign: 'center',
+          opacity: h2Opacity,
+          transform: `translateY(${h2Y}px) scale(${h2Scale})`,
+          filter: `blur(${h2Blur}px)`,
+          lineHeight: 1.1,
+          marginBottom: 36,
         }}
-      />
+      >
+        Mauriciens
+      </div>
 
+      {/* Pills problème */}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          alignItems: 'center',
+          marginBottom: 36,
+        }}
+      >
+        <PillBadge
+          text="Facebook Marketplace n'est pas fait pour nous"
+          variant="cross"
+          opacity={fadeIn(frame, 52, 14)}
+          translateY={slideUp(frame, 52, 20, 18)}
+        />
+        <PillBadge
+          text="Trop d'arnaqueurs, pas assez de confiance"
+          variant="cross"
+          opacity={fadeIn(frame, 66, 14)}
+          translateY={slideUp(frame, 66, 20, 18)}
+        />
+        <PillBadge
+          text="Aucune plateforme locale dédiée"
+          variant="cross"
+          opacity={fadeIn(frame, 80, 14)}
+          translateY={slideUp(frame, 80, 20, 18)}
+        />
+      </div>
+
+      {/* Sous-texte */}
       <div
         style={{
           fontSize: 15,
@@ -72,33 +118,11 @@ export const Scene1Problem: React.FC = () => {
           textAlign: 'center',
           opacity: subOpacity,
           transform: `translateY(${subY}px)`,
-          maxWidth: 480,
+          maxWidth: 420,
           lineHeight: 1.5,
         }}
       >
-        Facebook Marketplace n'est pas fait pour nous
-      </div>
-
-      <div
-        style={{
-          marginTop: 8,
-          padding: '6px 14px',
-          opacity: badgeOpacity,
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 6,
-        }}
-      >
-        <span
-          style={{
-            fontSize: 13,
-            fontWeight: 700,
-            color: ZAFER_COLORS.accent,
-            fontFamily: TYPOGRAPHY.headingM.family,
-          }}
-        >
-          Le problème ❌
-        </span>
+        Il manquait une solution faite pour Maurice
       </div>
     </div>
   );
