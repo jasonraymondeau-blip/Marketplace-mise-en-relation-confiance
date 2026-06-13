@@ -3,3 +3,4 @@ output/*.mp4
 output/*.webm
 output/gif-frames/
 .DS_Store
+output/cards-frames/
