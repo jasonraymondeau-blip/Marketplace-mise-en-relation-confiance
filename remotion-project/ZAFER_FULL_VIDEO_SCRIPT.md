@@ -27,7 +27,7 @@
 
 ---
 
-## Plan de montage — 10 scènes, timing aligné sur la référence
+## Plan de montage — 9 scènes, timing aligné sur la référence
 
 | # | Référence (Kolize) | Zafer | Timecode |
 |---|---|---|---|
@@ -38,9 +38,10 @@
 | 4 | "On s'occupe de tout" — checklist 4 étapes | "Publier, c'est 4 étapes" — checklist | 0:18–0:22.5 |
 | 5 | "On vous dit exactement quoi faire" — 3 cartes photo | "On vous guide à chaque étape" — 3 cartes photo annonce | 0:22.5–0:25.5 |
 | 6 | "Tout est basé sur..." Activité / Image / Tendances | "Tout est pensé pour..." Catégorie / Photos / Quartier | 0:25.5–0:30 |
-| 7 | "C'est simple / rapide / et surtout..." + réseau d'avatars | "C'est simple / rapide / et surtout en confiance" + réseau | 0:30–0:38 |
-| 8 | "Gagnez du temps / Soignez votre image" + carton prix 29.99€ | "Gagnez du temps / Vendez en confiance" + carton "Gratuit" | 0:38–0:40 |
-| 9 | "Simple / Pro / Fait pour vous" + logo + tagline finale | "Simple / Local / Fait pour Maurice" + logo + tagline finale | 0:40–0:45 |
+| 7 | "C'est simple / rapide / et surtout..." + réseau d'avatars + "Gagnez du temps / Soignez votre image" | "C'est simple / rapide / et surtout en confiance" + réseau + "Gagnez du temps / Vendez en confiance" | 0:30–0:38 |
+| 8 | "Simple / Pro / Fait pour vous" + logo + tagline finale | "Simple / Local / Fait pour Maurice" + logo (lettre par lettre) + tagline finale | 0:38–0:43 |
+
+> Pas de plan "prix" : Zafer est gratuit, donc pas de carton tarif façon "29.99€/mois" — la scène est supprimée du script (voir notes ci-dessous).
 
 ---
 
@@ -99,8 +100,8 @@ Transition vers une colonne de **3 mockups d'annonces** empilés verticalement �
 
 ## SCÈNE 3 — Entrée de Zafer (0:12 – 0:18s)
 
-**Beat A — Reveal du logo (façon intro "Kolize" tracée à la main)**
-Fond blanc. Un trait noir façon feutre dessine en time-lapse (stroke draw-on, ~20 frames) le contour de la maison-sourire du logo Zafer, puis le dessin bascule en couleur (terracotta + sourire blanc) et se stabilise en haut de l'écran, wordmark **"Zafer"** en dessous en DM Sans bold noir.
+**Beat A — Reveal du logo (façon intro "Kolize", lettre par lettre)**
+Fond blanc. L'icône maison-sourire de Zafer apparaît d'abord seule, en haut, par un pop discret (scale 0.8→1 + fade, ~8 frames). Juste en dessous, le wordmark **"Z a f e r"** s'écrit ensuite **lettre par lettre** : chaque lettre apparaît l'une après l'autre de gauche à droite (stagger ~4-5 frames entre chaque lettre), avec un petit effet d'entrée par lettre (translateY +10px→0 + fade + léger scale 0.85→1, easeOut) — exactement le principe de reveal progressif du logo "Kolize" dans la référence, mais appliqué lettre par lettre sur le wordmark DM Sans de Zafer plutôt qu'en tracé cursif. Une fois les 5 lettres posées, hold ~10 frames sur le logo complet (icône + "Zafer") avant de poursuivre.
 
 **Beat B — Mockups téléphone**
 Deux téléphones flottent légèrement inclinés de part et d'autre du logo :
@@ -178,23 +179,7 @@ Puis le réseau s'étend : 6-8 avatars supplémentaires apparaissent en orbite, 
 
 ---
 
-## SCÈNE 8 — Le prix : gratuit (0:38 – 0:40s)
-
-**Transition** : texte **"Et tout ça..."** entouré d'un trait elliptique tracé à la main (même procédé que la scène 0), cut vers fond plein terracotta `#BE5C3C`.
-
-**Visuel** : un téléphone mockup légèrement incliné occupe la gauche de l'écran, écran affichant l'app Zafer (liste d'annonces, barre de recherche, catégories en icônes). Des éléments décoratifs (petites pièces/étoiles stylisées, ou bulles de notification WhatsApp vertes) tombent en arrière-plan en parallax, façon confettis.
-
-**Texte** (grand, blanc, bold, à droite du téléphone) :
-**"Gratuit"**
-puis en dessous, plus petit : **"pour vendre et acheter"**
-
-> ⚠️ Note pour le client : dans la référence, ce plan affiche un prix d'abonnement ("29.99€/mois"). Le modèle économique réel de Zafer (gratuit, commission, freemium...) doit être confirmé avant production — ce script part de l'hypothèse "gratuit" cohérente avec un marketplace P2P grand public, à ajuster si un modèle payant existe.
-
-**Animation** : entrée du téléphone par la gauche avec léger flou de mouvement, le mot "Gratuit" apparaît en scale-in énergique (overshoot prononcé, façon "carton prix" de la référence), les éléments décoratifs tombent en boucle continue.
-
----
-
-## SCÈNE 9 — Closing : pilules finales + logo + tagline (0:40 – 0:45s)
+## SCÈNE 8 — Closing : pilules finales + logo + tagline (0:38 – 0:43s)
 
 **Beat A — Pilules finales**
 Fond blanc. 3 pilules apparaissent par paires successives (stagger), chacune avec un check vert :
@@ -205,7 +190,7 @@ Fond blanc. 3 pilules apparaissent par paires successives (stagger), chacune ave
 Chaque paire de pilules glisse légèrement depuis le bas en se chevauchant dans le temps avec la paire suivante (la 1ère reste visible quand la 2e arrive, transition douce par recouvrement horizontal).
 
 **Beat B — Logo outro**
-Cut vers fond blanc plein écran. Le logo Zafer se redessine en version "trait à la main" (même feutre noir que l'intro), puis se colorise (terracotta + sourire blanc), et le wordmark **"Zafer"** apparaît dessous en DM Sans bold noir.
+Cut vers fond blanc plein écran. Même principe que la scène 3 : l'icône maison-sourire apparaît en premier (pop), puis le wordmark se reconstitue **lettre par lettre, "Z" → "a" → "f" → "e" → "r"**, dans le même timing/easing que l'intro (stagger ~4-5 frames/lettre, fade + léger scale-in par lettre) — c'est la signature de fermeture du film, à l'identique du principe "Kolize" qui se redessine en fin de vidéo.
 
 **Beat C — Tagline finale**
 Sous le logo, en 2 lignes, kinetic typography : **"Vos bonnes affaires"** / **"méritent d'être vues."** (remplace "Votre savoir-faire mérite d'être vu"), puis hold ~20 frames sur l'écran final logo + tagline (carton de fin, éventuellement avec un bouton CTA "Télécharger l'app" ou "Visiter zafer.mu" si un end-card cliquable est nécessaire pour les formats publicitaires).
@@ -221,7 +206,8 @@ Sous le logo, en 2 lignes, kinetic typography : **"Vos bonnes affaires"** / **"m
 - **Avatars réseau** : entrée en cascade (stagger 6-10 frames), scale 0→1 avec léger overshoot (spring bounce faible), jamais plus de 8-10 avatars simultanés pour rester lisible.
 - **Vitesse globale** : la référence tient en 44.65s pour ~9 grandes scènes — chaque scène dure entre 2.5s et 8s, aucun plan ne dépasse ~8s. Respecter cette densité : on ne s'attarde jamais, le texte change toutes les 1.5-2.5s en moyenne.
 - **Élément récurrent optionnel** : un petit bouton flottant sticky en coin bas-droit type "Devis rapide" existe dans la référence tout au long de la vidéo (probablement un artefact du lecteur vidéo de la page d'origine, pas un élément du montage) — **ne pas reproduire**, ce n'est pas un élément de design intentionnel de la vidéo source.
-- **Durée finale cible** : 44-45s si calé strictement sur la référence ; la chaîne YouTube source indique un export "natif" de 49s (4s de carton de fin supplémentaire probable, non capturés dans l'enregistrement analysé) — prévoir éventuellement 3-4s de marge en fin de scène 9 pour un carton CTA cliquable si le format de diffusion l'exige (pub Instagram/TikTok avec bouton "En savoir plus").
+- **Durée finale cible** : ~42-43s (le plan "prix" de la référence ayant été retiré puisque Zafer est gratuit, le film est légèrement plus court que les 44.65s de la vidéo source) — prévoir éventuellement 3-4s de marge en fin de scène 8 pour un carton CTA cliquable si le format de diffusion l'exige (pub Instagram/TikTok avec bouton "En savoir plus").
+- **Pas de mention de prix/abonnement nulle part dans le film** : Zafer est gratuit pour vendre et acheter — aucun carton tarif, aucune pilule "29.99€" etc. ne doit apparaître dans la version finale.
 
 ---
 
@@ -241,7 +227,7 @@ Scène 5 : "On vous guide à chaque étape"
 Scène 6 : "Tout est pensé pour..." / "Votre catégorie" / "Vos photos" / "Votre quartier"
 Scène 7 : "C'est simple" / "C'est rapide" / "et surtout" / "en confiance"
           / "Gagnez du temps" / "Vendez en toute confiance"
-Scène 8 : "Et tout ça..." / "Gratuit" / "pour vendre et acheter"
-Scène 9 : "✓ Simple" / "✓ Local" / "✓ Fait pour Maurice"
+Scène 8 : "✓ Simple" / "✓ Local" / "✓ Fait pour Maurice"
+          / Logo "Z a f e r" (lettre par lettre)
           / "Vos bonnes affaires" / "méritent d'être vues."
 ```
