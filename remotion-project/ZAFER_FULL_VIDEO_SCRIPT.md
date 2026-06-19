@@ -1,8 +1,14 @@
 # Zafer — Script Motion Design (vidéo complète ~45s)
 
 > Brief créatif à destination d'un motion designer freelance.
-> Calqué image par image sur la vidéo de référence "Kolize" (1600.agency, 44.65s / 60fps / 2622×1206), même rythme, même grammaire d'animation, mêmes durées de plan — adapté à l'univers Zafer (marketplace P2P de confiance, île Maurice).
+> Calqué image par image sur la vidéo de référence "Kolize" (1600.agency, 44.65s / 60fps / 2622×1206), même rythme, même grammaire d'animation, mêmes durées de plan — adapté à l'univers Zafer (marketplace de mise en relation de confiance, île Maurice).
 > **Ce document ne contient aucun code.** Il décrit textes, visuels et animations à produire dans l'outil du designer (After Effects, Figma/Lottie, Rive, etc.).
+
+**Positionnement Zafer (à respecter dans tous les textes/visuels du script)** :
+- 3 verticales exactes : **Maison** (vente **et** location), **Voiture** (vente), **Ameublement / Électronique / Électroménager** (vente). Pas de "services" génériques type artisan/restaurateur.
+- Public : **professionnels et particuliers**, à parité — Zafer n'est pas réservé aux pros ni aux particuliers.
+- Modèle : **100 % gratuit**, à Maurice uniquement.
+- Contact : **direct par WhatsApp** (pas de messagerie interne à l'app) — c'est un argument différenciant à montrer explicitement.
 
 ---
 
@@ -31,14 +37,14 @@
 
 | # | Référence (Kolize) | Zafer | Timecode |
 |---|---|---|---|
-| 0 | Cartes "Vous êtes [métier]" | Cartes "Vous avez [un truc à vendre]" | 0:00–0:04 |
-| 1 | "pas le temps pour TikTok / agence à 600€" | "pas le temps de poster sur 5 groupes Facebook / une agence immo à 5000 Rs" | 0:04–0:08 |
+| 0 | Cartes "Vous êtes [métier]" | Cartes "Vous avez [Maison / Voiture / Ameublement] à vendre" | 0:00–0:04 |
+| 1 | "pas le temps pour TikTok / agence à 600€" | "pas le temps de poster sur 5 groupes Facebook / un revendeur qui prend une commission" | 0:04–0:08 |
 | 2 | "Résultat ? 0 vues, pas de présence en ligne..." | "Résultat ? annonce perdue, 0 vue, pas confiance..." | 0:08–0:12 |
-| 3 | Logo Kolize + "C'est votre community manager / 100% virtuel" | Logo Zafer + "C'est votre vitrine locale / 100% Maurice" | 0:12–0:18 |
+| 3 | Logo Kolize + "C'est votre community manager / 100% virtuel" | Logo Zafer + "C'est votre vitrine locale / 100% Maurice / Pros & Particuliers" | 0:12–0:18 |
 | 4 | "On s'occupe de tout" — checklist 4 étapes | "Publier, c'est 4 étapes" — checklist | 0:18–0:22.5 |
 | 5 | "On vous dit exactement quoi faire" — 3 cartes photo | "On vous guide à chaque étape" — 3 cartes photo annonce | 0:22.5–0:25.5 |
 | 6 | "Tout est basé sur..." Activité / Image / Tendances | "Tout est pensé pour..." Catégorie / Photos / Quartier | 0:25.5–0:30 |
-| 7 | "C'est simple / rapide / et surtout..." + réseau d'avatars + "Gagnez du temps / Soignez votre image" | "C'est simple / rapide / et surtout en confiance" + réseau + "Gagnez du temps / Vendez en confiance" | 0:30–0:38 |
+| 7 | "C'est simple / rapide / et surtout..." + réseau d'avatars + "Gagnez du temps / Soignez votre image" | "C'est simple / rapide / et surtout en confiance" + réseau + "Gagnez du temps / Vendez en confiance / Contact direct WhatsApp" | 0:30–0:38 |
 | 8 | "Simple / Pro / Fait pour vous" + logo + tagline finale | "Simple / Local / Fait pour Maurice" + logo (lettre par lettre) + tagline finale | 0:38–0:43 |
 
 > Pas de plan "prix" : Zafer est gratuit, donc pas de carton tarif façon "29.99€/mois" — la scène est supprimée du script (voir notes ci-dessous).
@@ -49,10 +55,10 @@
 
 **Visuel** : fond blanc. Au centre, un mot fantôme géant en arrière-plan, gris très clair (`rgba(0,0,0,0.08)`), DM Sans 900, qui occupe toute la largeur : **"Vous avez"**. Par-dessus, une pile de 3 cartes (même gabarit que les cartes du clip "Immobilier/Voiture/Maison" déjà livré : fond `#F5F2EC`, bordure 2.5px `#1A1A1A`, radius 18px, ombre décalée 7px) défile une par une au centre, légèrement inclinée (3D perspective, rotateY).
 
-**Texte sur les cartes** (icône outline 52px + label DM Sans bold 15px) :
-1. Icône **valise/cartable** → label **"Un service à proposer"**
-2. Icône **canapé/meuble** → label **"Un meuble à vendre"**
-3. Icône **clé** → label **"Un logement à louer"**
+**Texte sur les cartes** (icône outline 52px + label DM Sans bold 15px) — les 3 verticales exactes de Zafer :
+1. Icône **maison** → label **"Maison à vendre ou louer"**
+2. Icône **voiture** → label **"Voiture à vendre"**
+3. Icône **canapé/meuble** (ou frigo) → label **"Meuble, électronique, électroménager"**
 
 **Texte final de la scène** (remplace le mot fantôme, kinetic typography, noir `#1A1A1A`, bold) :
 **"Vous avez quelque chose à vendre ou louer"** — le segment "à vendre ou louer" est souligné d'un trait elliptique tracé à la main, terracotta `#BE5C3C` (même effet que l'ellipse jaune sous "savoir-faire" dans la référence).
@@ -74,10 +80,12 @@ Mot **"Mais.."** en kinetic typography (bold noir), entrée scale-in + blur, sur
 Une icône d'horloge ronde façon emoji (cadran rose `#E8B4C8`-like recoloré en terracotta clair `#E3B8A8`, aiguilles noires) apparaît en haut, et le texte **"pas le temps pour"** s'écrit dessous en DM Sans bold noir. Une pilule (badge arrondi, fond sable `#F3E9D7`, icône carrée à gauche) glisse depuis la droite avec le texte **"poster sur 10 groupes Facebook"**.
 
 **Beat C — Coût d'une alternative**
-Transition flou de couleur (cross-blur) : le fond passe au sable, puis au terracotta clair. Le texte **"une alternative à"** apparaît, puis cut sur un fond terracotta clair plein écran avec :
-- Une carte type "annonce immobilière" (icône bâtiment, placeholder photo, barre de prix) qui flotte au centre, légèrement inclinée, avec rebond.
-- Le prix **"5 000 Rs"** affiché en gros sous la carte.
+Transition flou de couleur (cross-blur) : le fond passe au sable, puis au terracotta clair. Le texte **"ou passer par un revendeur qui prend"** apparaît, puis cut sur un fond terracotta clair plein écran avec :
+- Une carte type "annonce" (icône maison ou voiture selon la verticale choisie pour le plan, placeholder photo, barre de prix) qui flotte au centre, légèrement inclinée, avec rebond.
+- Une **commission** affichée en gros sous la carte (ex. **"-10 %"** ou un montant en roupies, à confirmer selon ce qui parle le plus à la cible).
 - Des pièces de monnaie / billets stylisés (petits ovales orange, traits) qui tombent en arrière-plan façon confettis, mouvement de chute avec léger tangage (rotation oscillante), à différentes vitesses pour un effet parallax.
+
+> Note : Zafer n'étant pas une agence, ce plan ne doit pas suggérer que Zafer prend une commission — il illustre l'alternative payante (revendeur, agence, courtier) que Zafer remplace.
 
 **Animation** : chaque mot-clé entre en kinetic typography (scale 0.8→1, blur 12px→0px, translateY +20px→0, easeOut, ~10 frames), les pilules glissent horizontalement (translateX 60px→0, opacity 0→1). Les pièces tombent en boucle continue tout le long du beat C (translateY infini, rotation sinusoïdale, recyclées hors-écran).
 
@@ -106,14 +114,14 @@ Fond blanc. L'icône maison-sourire de Zafer apparaît d'abord seule, en haut, p
 **Beat B — Mockups téléphone**
 Deux téléphones flottent légèrement inclinés de part et d'autre du logo :
 - Téléphone gauche : écran "Statistiques de mon annonce" — compteur **"Vues : 1 248"**, **"Contacts WhatsApp : 12"**.
-- Téléphone droit : écran de création d'annonce avec une photo de produit (ex. une table en bois ou une voiture) et le badge **"Photo optimisée"**.
+- Téléphone droit : écran de création d'annonce avec une photo de produit (une voiture, une maison ou un meuble selon la verticale à illustrer) et le badge **"Photo optimisée"**.
 
 **Beat C — Phrase d'accroche**
 Le logo et les téléphones s'effacent doucement (fade + léger scale down), et le texte central apparaît, centré, en deux temps (mot par mot, kinetic typography) :
 **"C'est votre"** puis **"vitrine locale de confiance"**, avec un avatar rond (photo d'un utilisateur mauricien souriant, style portrait neutre) qui apparaît au-dessus du texte, entouré de 2 cercles concentriques fins (anneaux de "radar"/réseau) qui se dessinent progressivement (stroke draw-on, opacity croissante).
 
 **Beat D — Badge + toggle**
-Une pilule terracotta apparaît sous le texte : **"100 % Maurice"** (remplace "100% virtuel"). En dessous, un toggle/switch avec le label **"Vendeurs vérifiés"** s'anime de off → on (le rond du switch glisse de gauche à droite, le fond du switch passe de gris à vert `#7FA86B`).
+Une pilule terracotta apparaît sous le texte : **"100 % Maurice"** (remplace "100% virtuel"). En dessous, un toggle/switch avec le label **"Particuliers & Professionnels"** s'anime de off → on (le rond du switch glisse de gauche à droite, le fond du switch passe de gris à vert `#7FA86B`) — pour bien montrer que Zafer s'adresse aux deux publics, pas seulement aux particuliers.
 
 **Beat E — Réseau d'avatars**
 Au moment où le toggle s'active, 6 à 8 petits avatars (photos de visages divers, représentatifs de la population mauricienne) apparaissent en orbite autour de l'avatar central, sur 2 cercles concentriques, avec un effet d'entrée en cascade (stagger ~6 frames entre chaque, scale 0→1 + fade, easeOut bounce léger).
@@ -128,7 +136,7 @@ Au moment où le toggle s'active, 6 à 8 petits avatars (photos de visages diver
 
 1. **Photo** (icône appareil photo)
 2. **Description** (icône texte/lignes)
-3. **Catégorie** (icône étiquette — Véhicule / Immobilier / Maison)
+3. **Catégorie** (icône étiquette — Maison / Voiture / Ameublement-Électronique-Électroménager)
 4. **Publication** (icône check / fusée)
 
 **Animation** : chaque étape apparaît avec un délai de ~12 frames sur la précédente — le rond passe de "vide contour gris" à "plein coloré + coche" en un crossfade rapide (8 frames), et le segment de ligne qui le relie au précédent se dessine juste avant (stroke-dashoffset animé). À la fin, hold 15 frames sur les 4 étapes complètes, puis un léger zoom-out / recul de caméra (scale 1→0.92) pour amorcer la transition suivante.
@@ -150,7 +158,7 @@ Au moment où le toggle s'active, 6 à 8 petits avatars (photos de visages diver
 **Texte titre** : **"Tout est pensé pour..."** (remplace "Tout est basé sur..."), kinetic typography, avatar utilisateur qui apparaît au-dessus du titre avec 2 lignes pointillées qui descendent ensuite vers 3 cartes.
 
 **3 cartes qui apparaissent une à une** (stagger ~15 frames), chacune avec un check vert au-dessus :
-1. **"Votre catégorie"** — grille de 6 icônes outline (voiture, maison, frigo/électroménager, vêtement, téléphone, vélo), l'icône "Véhicule" est surlignée (fond bleu clair) pour illustrer une sélection active.
+1. **"Votre catégorie"** — grille de 6 icônes outline reprenant exactement les verticales Zafer : **maison à vendre**, **maison à louer**, **voiture**, **meuble**, **électronique**, **électroménager**. L'icône "Voiture" est surlignée (fond bleu clair) pour illustrer une sélection active.
 2. **"Vos photos"** — 3 mini-vignettes photo, l'une surlignée en bleu pour indiquer "photo principale sélectionnée".
 3. **"Votre quartier"** — petite carte stylisée de l'île Maurice avec un point/pin terracotta localisé sur une ville (ex. Port-Louis ou Curepipe), et 2-3 lignes de tendance discrètes (mini sparkline) en arrière-plan évoquant la demande locale.
 
@@ -173,9 +181,10 @@ Fond blanc. Un avatar central (visage d'un utilisateur Zafer, photo réelle ou i
 
 Puis le réseau s'étend : 6-8 avatars supplémentaires apparaissent en orbite, en cascade (stagger), représentant des acheteurs/vendeurs à travers l'île — pour suggérer "tout Maurice vous voit". Les anneaux concentriques continuent de pulser légèrement (scale 1→1.03→1 en boucle lente) pour donner une sensation de réseau vivant.
 
-**Texte qui s'incruste pendant l'expansion du réseau** (2 pilules qui apparaissent successivement en bas) :
+**Texte qui s'incruste pendant l'expansion du réseau** (3 pilules qui apparaissent successivement en bas, en chevauchement léger) :
 1. **"Gagnez du temps"** + icône horloge, sur fond avec un graphique discret en diagonale derrière (lignes de tendance ascendante, rose/terracotta clair).
 2. **"Vendez en toute confiance"** (remplace "Soignez votre image") + icône bouclier ou cœur-check, avec une petite couronne ou étoile scintillante au-dessus d'une carte-annonce pour suggérer "mise en avant / avis positifs".
+3. **"Contactez directement sur WhatsApp"** + icône bulle WhatsApp verte — pilule qui se détache visuellement des deux précédentes (fond vert WhatsApp `#25D366` clair, icône blanche), pour marquer que c'est un argument fort et différenciant (pas de messagerie interne à gérer).
 
 ---
 
@@ -214,19 +223,21 @@ Sous le logo, en 2 lignes, kinetic typography : **"Vos bonnes affaires"** / **"m
 ## Récapitulatif des textes (pour copier-coller rapide)
 
 ```
-Scène 0 : Un service à proposer / Un meuble à vendre / Un logement à louer
-          → "Vous avez quelque chose à vendre ou louer"
+Scène 0 : Maison à vendre ou louer / Voiture à vendre / Meuble, électronique,
+          électroménager → "Vous avez quelque chose à vendre ou louer"
 Scène 1 : "Mais.." / "pas le temps pour" / "poster sur 10 groupes Facebook"
-          / "une alternative à" / "5 000 Rs"
+          / "ou passer par un revendeur qui prend" / commission
 Scène 2 : "Résultat ?" / "✕ Annonce invisible" / "✕ Pas de réponse"
           / "✕ Aucun acheteur sérieux"
 Scène 3 : "C'est votre" / "vitrine locale de confiance" / "100 % Maurice"
-          / "Vendeurs vérifiés"
+          / "Particuliers & Professionnels"
 Scène 4 : "Publier, c'est 4 étapes" / Photo / Description / Catégorie / Publication
 Scène 5 : "On vous guide à chaque étape"
-Scène 6 : "Tout est pensé pour..." / "Votre catégorie" / "Vos photos" / "Votre quartier"
+Scène 6 : "Tout est pensé pour..." / "Votre catégorie" (maison vente, maison location,
+          voiture, meuble, électronique, électroménager) / "Vos photos" / "Votre quartier"
 Scène 7 : "C'est simple" / "C'est rapide" / "et surtout" / "en confiance"
           / "Gagnez du temps" / "Vendez en toute confiance"
+          / "Contactez directement sur WhatsApp"
 Scène 8 : "✓ Simple" / "✓ Local" / "✓ Fait pour Maurice"
           / Logo "Z a f e r" (lettre par lettre)
           / "Vos bonnes affaires" / "méritent d'être vues."
